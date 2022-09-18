@@ -10,7 +10,7 @@ function SortPopup({ items, onClickItem }) {
     setVisiblePopup(!visiblePopup);
   };
   const hendlerOutsideClick = (e) => {
-    console.log(e.path);
+    // console.log('e.path', e.path);
     if (!e.path.includes(sortRef.current)) {
       setVisiblePopup(false);
     }
@@ -19,7 +19,7 @@ function SortPopup({ items, onClickItem }) {
 
   useEffect(() => {
     document.body.addEventListener('click', hendlerOutsideClick);
-    console.log(sortRef.current);
+    // console.log('sortRef', sortRef.current);
   }, []);
 
   const onSelectPopup = (i) => {
